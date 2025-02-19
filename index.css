@@ -1,0 +1,1124 @@
+*{
+    font: 16px 'Pretendard', sans-serif;
+    color:#333333;
+    letter-spacing: -2px;
+    --swiper-centered-offset-before: none;
+    --swiper-centered-offset-after: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+.blind{
+    display: block;
+}
+
+html, body{
+    height: 100%;
+    min-width: 1248px;
+    overflow-x: auto;
+}
+
+.container{
+    white-space:nowrap;
+    overflow-x: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+
+input[type="radio"] + label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+input[type="button"]{
+    outline: none;
+    border : none;
+}
+
+.gb-1{
+    border : 1px solid black;
+}
+
+.swap{
+    max-width: 1248px;
+    margin:0 auto;
+}
+
+span {
+    letter-spacing: -2px;
+}
+
+/* nav---------------------------------------------------------------- */
+#nav{
+    position: fixed;
+    width: 100%;
+    border-bottom:1px solid #eeeeee;
+    z-index: 10;
+}
+/* over---------------------------------------------------------------- */
+#over{
+    align-items: center;
+    height: 36px;
+    background-color: #edf1f5;
+    color: rgb(95, 95, 95);
+}
+
+#over .swap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+#over .swap img{
+    padding: 0 10px;
+}
+
+#over .swap p{
+    font-size: 12px;
+}
+/* top---------------------------------------------------------------- */
+#top{
+    background-color: #62d491;
+    height: 40px;
+}
+
+#top .swap{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#top .swap *{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#top .swap .right div:first-child p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#top .swap .right div:last-child{
+    background-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    padding: 0;
+    width: 80px;
+    height: 23px;
+    margin : 0;
+}
+
+#top .swap .right div:last-child a{
+    font-size: 14px;
+    margin:0;
+    padding:10px;
+}
+
+#top .swap .left {
+    display: flex;
+    border-left : 1px solid #5dc488;
+    border-right : 1px solid #5dc488;
+    height: 100%;
+    width: 250px;
+    padding: 0;
+}
+
+#top .swap .left input[type="radio"]:checked + label{
+    height: 100%;
+    width: 100%;
+    font-weight: 700;
+    color : #333333;
+    background: white;
+    text-align: center;
+}
+
+/* aside------------------------------------------------------------ */
+
+#aside{
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top:0;
+    right:0;
+    background: white;
+    height:100%;
+    border-left: 1px solid #62d491;
+    width:52px;
+    z-index: 20000;
+}
+
+#aside>div{
+    margin:120px 8px 0;
+    width: 34px;
+    height:23px;
+    background:url(https://www.work24.go.kr/cm/static/images/quick_tl.png) no-repeat;
+}
+
+#aside ul li a .menu-txt{
+    display: none;
+}
+
+#aside:hover{
+    width: 160px;
+}
+
+#aside:hover ul li a .menu-txt{
+    display: block;
+    font-size:14px;
+}
+#aside ul li a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#aside ul li a .menu-ico{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
+}
+
+#aside ul li a .ico01{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_home_center.svg) no-repeat center;
+}
+
+#aside ul li a .ico02{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_faq.svg) no-repeat center;
+}
+
+#aside ul li a .ico03{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_pc.svg) no-repeat center;
+}
+
+#aside ul li a .ico04{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_task_normal.svg) no-repeat center;
+}
+
+#aside ul li a .ico05{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_home_smile.svg) no-repeat center;
+}
+
+#aside ul li a .ico06{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_cal_normal.svg) no-repeat center;
+}
+
+#aside ul li a .ico07{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_coin.svg) no-repeat center;
+}
+
+/* member-menu---------------------------------------------------------------- */
+#member-menu{
+    background: white;
+}
+
+#member-menu ul{
+    display: flex;
+    gap : 10px;
+    justify-content : flex-end;
+    height: 40px;
+    align-items: center;
+}
+
+#member-menu ul li{
+    font-size: 13px;
+    color: #2c2c2c;
+}
+
+/* menu---------------------------------------------------------------- */
+#menu{
+    background: white;
+}
+
+#menu .swap{
+    display: flex;
+    background: white;
+    align-items: center;
+    min-width: 1248px;
+    gap: 20px;
+}
+
+#menu .swap > div:first-child {
+    width: 150px;
+}
+
+#menu .swap > div:last-child {
+    width: 150px;
+    text-align: center;
+}
+
+#menu .swap > div:last-child a{
+    display: flex;
+    align-items: center;
+}
+
+#menu .swap > div:last-child a span:first-child{
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico32_category.svg) no-repeat center/contain;
+    width: 32px;
+    height: 32px;
+}
+
+#menu .swap > div:last-child a span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+#menu_ul:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 248px;
+    top: 100%;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    pointer-events: none;
+}
+
+#menu_ul:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    top: calc(100% + 248px);
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+#menu .swap ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    flex: 1;
+}
+
+#menu .swap ul li {
+    height: 100%;
+}
+
+
+#menu .swap ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+#menu .swap ul .bottom {
+    position: absolute;
+}
+
+#menu .swap ul .bottom li {
+    height: 40px;
+}
+
+#menu .swap ul .bottom li a {
+    padding: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#menu_ul > li {
+    position: relative;
+}
+
+#menu_ul > li .bottom {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+#menu_ul:hover .bottom {
+    display: block;
+}
+
+/* anime----------------------------------------------------------------- */
+.underGreen{
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    height: 70%;
+    align-items: center;
+}
+
+.underGreen::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 0;
+    height: 4px;
+    background: #117935;
+    transition : width 0.3s ease-in-out;
+}
+
+.underGreen:hover{
+    color: #117935;
+}
+
+.underGreen:hover::after{
+    width: 100%;
+}
+/* inbody---------------------------------------------------------------- */
+#inbody {
+    margin-top: 243px;
+}
+
+#inbody-1 .swap{
+    position:relative;
+}
+
+#inbody-1 .image{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left:-232px;
+    top: 22px;
+    width: 186px;
+    height: 79px;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/bg_visual.png) no-repeat;
+}
+#inbody-1 .swap{
+    display: flex;
+}
+/*search------------------------------------------------  */
+#search{
+    height: 248px;
+    width: 682px;
+    padding: 47px 0px 0px;
+}
+
+/*search way------------------------------------------------  */
+
+#search .way{
+    display: flex;
+    align-items: center;
+    margin-bottom:15px;
+}
+
+#search .way input[type='radio']+label{
+    width: auto;
+    margin-left: 15px;
+}
+
+#search .way input[type='radio']+label::before{
+    display:inline-block;
+    content:"";
+    width:30px;
+    height:30px;
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_default.png) no-repeat;
+    background-size: 30px;
+    vertical-align: top;
+    margin:-4px 5px 0 0;
+}
+
+#search .way span{
+    color : #757575;
+    font-size:20px;
+    font-weight: 600;
+}
+
+/* search way ani-------------------------------------------------- */
+
+#search .way input[type='radio']+label .underBlue{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underBlue::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #a6b2f0;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#search .way input[type='radio']+label .underBlue:hover {
+    color: #4b64e1;
+}
+
+#search .way input[type='radio']+label .underBlue:hover::after {
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label .underBlue{
+    color: #4b64e1;
+}
+
+#search .way input[type='radio']:checked + label .underBlue::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(1)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_blue.png);
+}
+
+#search .way input[type='radio']+label .underLGreen{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underLGreen::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #b0eac8;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#search .way input[type='radio']+label .underLGreen:hover {
+    color: #117935;
+}
+
+#search .way input[type='radio']+label .underLGreen:hover::after {
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label .underLGreen{
+    color: #117935;
+}
+
+#search .way input[type='radio']:checked + label .underLGreen::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(2)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_green.png);
+}
+
+#search .way input[type='radio']+label .underOrange{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underOrange::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #ffbf7f;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#search .way input[type='radio']+label .underOrange:hover {
+    color: #f0651f;
+}
+
+#search .way input[type='radio']+label .underOrange:hover::after {
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label .underOrange{
+    color: #f0651f;
+}
+
+#search .way input[type='radio']:checked + label .underOrange::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(3)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_orange.png);
+}
+
+/* input------------------------------------------------------------ */
+
+#search .input {
+    position: relative;
+    width: 682px;
+    height: 62px;
+    background: linear-gradient(to right, #5eca69, #7e9bfe) no-repeat;
+    border-radius: 50px 50px 50px 50px;
+}
+#search .input .input-in {
+    position: absolute;
+    display: flex;
+    top:5px;
+    left:5px;
+    width: 672px;
+    height: 52px;
+    justify-content: center;
+    background: white;
+    border-radius: 50px 50px 50px 50px;
+}
+/* input querySelect-------------------------------------------- */
+#querySelect{
+    position: relative;
+    width:135px;
+    height: 52px;
+    padding: 0 16px 0 0;
+}
+
+#querySelect button{
+    width:100%;
+    height: 100%;
+    cursor:pointer;
+    background: white;
+    border: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:0px;
+    border-radius: 10px;
+}
+
+#querySelect button span{
+    font-size: 20px;
+    width: 33.94;
+    height: 27;
+    color: #333333;
+}
+
+#querySelect button+div{
+    display: none;
+}
+
+#querySelect button:focus+div{
+    display: block;
+}
+
+#querySelect button+div:hover{
+    display: block;
+}
+
+#querySelect button+div:focus{
+    display: block;
+}
+
+/* content-1------------------------------------------------ */
+
+#content-1{
+    width:100%;
+    height: 300.6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* search--------------------------------------- */
+
+#search .input .input-in{
+    display: flex;
+    align-items: center;
+}
+
+#search .input .input-in input[type="text"]{
+    border:none;
+    border-left: 1px solid #eeeeee;
+    width: 455px;
+    height: 45px;
+    padding: 1px 2px 1px 10px;
+}
+
+#search .input .input-in>a{
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_search.svg) no-repeat;
+    margin :  0px 0px;
+    width: 32px;
+    height: 32px;
+}
+
+/* search selectLayer------------------------------------ */
+
+#selectLayer{
+    display:flex;
+    margin-top:10px;
+    position:absolute;
+    width:90%;
+    z-index:2;
+    border-radius: 16px;
+    border : 1px solid #757575;
+    background-color: white;
+    justify-content: center;
+}
+
+#selectLayer ul li{
+    align-items: center;
+}
+#selectLayer ul li a{
+    padding: 4px 16px;
+    display: block;
+    color:#333333;
+    height: 100%;
+    width: 110px;
+}
+
+#selectLayer ul li a:focus{
+    padding: 4px 16px;
+    display: inline-block;
+    background: #f5f5f5;
+    border-top: 3px dotted black;
+    border-bottom: 3px dotted black;
+    text-decoration: underline;
+    font-weight: 600;
+    width: 110px;
+    height: 100%;
+}
+
+#selectLayer ul li a:focus::after{
+    content: "";
+    background: url(https:s//www.work24.go.kr/cm/static/images/ico16_ui_checked03.svg) no-repeat center;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+}
+
+/* search suggest---------------------------------------- */
+
+#suggest{
+    margin : 24px 0px 0px;
+    display: flex;
+}
+
+#suggest .dd{
+    margin: 7px 0px 0px 24px;
+    padding: 0 0 0 24px;
+    font-size: 14px;
+    color: #111111;
+    font-weight: 600;
+    display: flex;
+    align-items:flex-start;
+}
+
+#suggest .dd::before{
+    content:'';
+    display: inline-block;
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_search.svg) no-repeat center/contain;
+    width: 16px;
+    height: 16px;
+    margin-right:8px;
+}
+
+#suggest .dt ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: -8px 0 0 0;
+    gap: 4px;
+}
+
+#suggest .dt ul li{
+    display : flex;
+    margin : 8px 0 0 8px;
+    align-items: center;
+}
+
+#suggest .dt ul li a{
+    background: #f5f5f5;
+    padding: 0 12px;
+    border-radius: 40px;
+    padding : 6px 12px;
+    font-size: 13px;
+    color: #555555;
+}
+
+/* loginBenefit---------------------------------------------------- */
+#loginBenefit{
+    width: 506px;
+    height: 250.6px;
+    border: 1px solid #62D491;
+    padding : 32px 22px;
+    color: #333333;
+    border-radius: 10px;
+}
+
+#loginBenefit .div-1 p{
+    font-size:20px;
+    color:#333333;
+    font-weight: 600;
+}
+#loginBenefit .div-1 p a{
+    font-size:20px;
+    color:#118849;
+    font-weight: 600;
+}
+
+/* loginBenefit ul---------------------------------------------------- */
+
+#loginBenefit ul{
+    display:flex;
+    margin : 9px 0 0;
+    flex-wrap: wrap;
+    width: 460.4px;
+    height: 80px;
+    margin-top:9px;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBenefit ul li{
+    width: 50%;
+    height: 24px;
+    display: flex;
+    align-items: flex-end;
+    margin:16px 0 0;
+}
+
+#loginBenefit ul .ico01{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide01.svg) center no-repeat;
+}
+
+#loginBenefit ul .ico02{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide02.svg) center no-repeat;
+}
+
+#loginBenefit ul .ico03{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide03.svg) center no-repeat;
+}
+
+#loginBenefit ul .ico04{
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide04.svg) center no-repeat;
+}
+#loginBenefit ul .ico{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+/* loginBenefit input---------------------------------------------------- */
+
+#loginBenefit input[type='submit']{
+    width:100%;
+    height: 48px;
+    background: #62d491;
+    margin: 24px 0px 0px;
+    color:#111111;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+/* inbody-2------------------------------------------------------------ */
+#inbody-2{
+    background: #F5F5F5;
+    padding:80px 0;
+    height:765.2px;
+}
+/* content-2------------------------------------------------------------ */
+#content-2>h2{
+    font-size: 32px;
+    color:#111111;
+    height:48px;
+    font-weight: bold;
+}
+#content-2>p{
+    margin:8px 0 0;
+    color:#555555;
+}
+#content-2>p>a{
+    color:#117935;
+    width: 100%;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* content-2 card------------------------------------------------------------ */
+
+#content-2 .cardList{
+    display: flex;
+    width: 100%;
+    height: 438px;
+    flex-wrap: wrap;
+    white-space: normal;
+    justify-content: space-around;
+}
+
+#content-2 .cardList .card{
+    display: flex;
+    width: 294px;
+    height:100%;
+    margin-top:32px;
+    background: white;
+    border-radius: 10px;
+}
+
+#content-2 .cardList .card .pointer {
+    width: 100%;
+    height: 100%;
+    transition: border 0.06s ease-in;
+}
+
+#content-2 .cardList .card .pointer:hover {
+    border: 3px solid #62D491;
+    border-radius: 10px;
+}
+
+#content-2 .cardList .card .pointer a{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height:100%;
+}
+
+#content-2 .cardList .card .pointer a .padd{
+    padding: 12px 20px 0;
+}
+
+#content-2 .cardList .card .pointer a  .padd>.logo{
+    display: flex;
+    height:120px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#content-2 .cardList .card .pointer a  .padd>.logo>span{
+    font-size:20px;
+    font-weight:600;
+}
+
+#content-2 .cardList .card .pointer a  .padd>.label-box{
+    height: 22px;
+}
+
+#content-2 .cardList .card .pointer a  .padd>.title{
+    height:28px;
+}
+#content-2 .cardList .card .pointer a  .padd>.title span{
+    font-size:18px;
+    color:#111111;
+    font-weight: 600;
+}
+
+#content-2 .cardList .card .pointer a  .padd>.info{
+    display: inline-block;
+    line-height: 1.5;
+    letter-spacing: 0;
+    height:56px;
+    width: 100%;
+}
+
+#content-2 .cardList .card .pointer a ul{
+    height:92px;
+    list-style-type: disc;
+}
+
+#content-2 .cardList .card .pointer a ul>li{
+    display:flex;
+    position:relative;
+    height:28px;
+    margin:4px 0 0;
+    padding: 0 0 0 10px;
+}
+
+#content-2 .cardList .card .pointer a ul>li::before{
+    position: absolute;
+    left: -5px;
+    font-weight: 600;
+    content: 'ㆍ';
+    display: inline-block;
+    font-size: 16px;
+}
+
+#content-2 .cardList .card .pointer a .calenderBox {
+    width:100%;
+    height: 58px;
+    border-top: 1px solid #757575;
+    color:#555;
+    line-height: 58px;
+    text-align: center;
+}
+
+#content-2 .cardList .card .pointer a .calenderBox:hover {
+    background-color: #E8FCF0;
+    border-radius: 0 0 10px 10px;
+}
+
+#content-2 .cardList .card .pointer a .calenderBox span{
+    font-size: 20px;
+}
+
+/* inbody-3------------------------------------------------------------ */
+
+#inbody-3 {
+    padding: 80px 0;
+    height: 700px;
+    margin:0 134.4px;
+}
+
+/* content-3------------------------------------------------------------ */
+#content-3>h2{
+    color: #111111;
+    font-size:32px;
+    font-weight: 600;
+}
+
+#content-3>p{
+    height: 28px;
+    margin: 8px 0 0;
+    color: #555555;
+}
+
+/* content-3 button--------------------------------------- */
+
+#content-3>ul{
+    display:flex;
+    justify-content:flex-start;
+}
+
+#content-3>ul li{
+    height: 40px;
+    width: min-content;
+}
+
+#content-3>ul li button{
+    border: 1px solid black;
+    background: white;
+    border-radius: 30px;
+    padding: 0 15px;
+    height: 40px;
+    width: min-content;
+    margin-left: 8px; 
+    position: relative;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+#content-3>ul li button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #62d491;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#content-3>ul li button:focus::before {
+    transform: scaleX(1);
+}
+
+#content-3>ul li button:focus {
+    background-color: transparent;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+/* content-3 card--------------------------------------- */
+
+#content-3>div{
+    position: relative;
+    height: 384px;
+    width: 100%;
+}
+
+#content-3>div>a{
+    position: absolute;
+    left: -24px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#content-3>div>a>.card{
+    height: calc(50% - 24px);
+    width: calc(25% - 24px);
+    border: 1px solid transparent;
+    margin:24px 0 0 24px;
+    padding : 24px 20px;
+    border-radius: 10px;
+}
+#content-3>div>a>.card .title{
+    display:flex;
+    align-items: flex-start;
+    height: 56px;
+    line-height: 28px;
+    font-size:18px;
+    font-weight: 600;
+    color:#111;
+}
+#content-3>div>a>.card .content{
+    margin-top: 8px;
+    line-height: 28px;
+    color:#000;
+    white-space: wrap;
+    transition: 0.2s ease;
+}
+
+#content-3>div>a>.blue{
+    background: #e3eeff;
+}
+
+#content-3>div>a .green{
+    background: #e8fcf0;
+}
+
+#content-3>div>a .orange{
+    background: #fcece4;
+}
+
+#content-3>div>a>.blue:hover{
+    background: #4D65E1;
+}
+
+#content-3>div>a>.blue:hover div{
+    color:white;
+}
+
+#content-3>div>a .green:hover{
+    background: #19ada8;
+}
+
+#content-3>div>a .green:hover div{
+    color: white;
+}
+
+#content-3>div>a .orange:hover{
+    background: #F0651F;
+}
+
+#content-3>div>a .orange:hover div{
+    color: white;
+}
